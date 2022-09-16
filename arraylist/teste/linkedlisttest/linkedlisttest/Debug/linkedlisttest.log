@@ -1,0 +1,5 @@
+﻿  test.cpp
+C:\Users\Paulo Ricardo Dantas\Documents\AED(DCA0208)\arraylist\teste\linkedlisttest\linkedlisttest\test.cpp(130,11): warning C4244: 'inicializando': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Paulo Ricardo Dantas\Documents\AED(DCA0208)\arraylist\teste\linkedlisttest\linkedlisttest\test.cpp(135,3): warning C4244: 'argumento': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Paulo Ricardo Dantas\Documents\AED(DCA0208)\arraylist\teste\linkedlisttest\linkedlisttest\test.cpp(136,39): warning C4244: 'argumento': conversão de 'double' para 'int', possível perda de dados
+C:\Users\Paulo Ricardo Dantas\Documents\AED(DCA0208)\arraylist\linkedlist.h(77): error C4716: 'obterElementoEmPosicao': deve retornar um valor
