@@ -94,11 +94,37 @@ void inserirElementoEmPosicao(struct linkedlist* lista, int valor, int posicao) 
 }
 
 int obterElementoEmPosicao(struct linkedlist* lista, int posicao) {
-    //TODO
+    //verificando se posicao eh valida
+    if(posicao >= 0 && posicao < lista->qtdade){
+        struct no* aux = lista->cabeca;
+
+        for(int i = 0; i < posicao; i++){
+            aux = aux->prox;
+        }
+        return aux->val;
+    }
 }
 
 void removerElementoEmPosicao(struct linkedlist* lista, int posicao) {
-    //TODO
+    //verificando se posicao eh valida
+    if(posicao >= 0 && posicao < lista->qtdade){
+        struct no* aux = lista->cabeca;
+
+        if(posicao == 0){
+            lista->cabeca = aux->prox;
+            free(aux);
+            lista->qtdade--;
+        }
+        else{
+            for(int i = 0; i < posicao; i++){
+                aux = aux->prox;
+            }
+            struct no* aux2 = aux -> prox;
+            aux -> prox = aux2 -> prox;
+            free(aux2);
+            lista->qtdade--;
+        }
+    }
 }
 
 void imprimirLista(struct linkedlist* lista) {
