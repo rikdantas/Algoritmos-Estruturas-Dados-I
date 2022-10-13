@@ -10,18 +10,24 @@ void imprimeVetor(int *v, int tamanho){
   printf("\n");
 }
 
+void troca(int *v, int i, int j){
+    int aux = v[i];
+    v[i] = v[j];
+    v[j] = aux;
+}
+
 void bubbleSortIP(int *v, int tamanho){
-  //incompleto
-  for(int varredura = 1; varredura <= tamanho-1;varredura++){
+  for(int varredura = 0; varredura < tamanho-1;varredura++){
     bool trocou = false;
-    for(int i = 0; j<tamanho; j++){
-      if(v[j] < v[iMenor]){
-        iMenor = j;
+    for(int i = 0; i<tamanho-varredura-1; i++){
+      if(v[i] > v[i+1]){
+        troca(v,i,(i+1));
+        trocou = true;
       }
     }
-    aux = v[i];
-    v[i] = v[iMenor];
-    v[iMenor] = aux;
+    if(trocou==false){
+        return;
+    }
   }
 }
 
